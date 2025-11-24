@@ -10,10 +10,14 @@ connectDB();
 
 const app = express();
 app.use(cors({
-  origin: "https://scriptguru-frontend-five.vercel.app",
+  origin: [
+    "http://localhost:5173",
+    "https://scriptguru-frontend-five.vercel.app"
+  ],
   methods: "GET,POST,PUT,DELETE",
   allowedHeaders: "Content-Type",
 }));
+
 
 app.use(express.json());
 
